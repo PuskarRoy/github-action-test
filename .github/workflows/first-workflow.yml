@@ -12,4 +12,8 @@ jobs:
       - name: Get Code from github
         uses: actions/checkout@v6
       - name: run ls
-        run: ls -a
+        run: |
+          ls -a
+          pwd
+          cd ~
+          pwd
