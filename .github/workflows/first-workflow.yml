@@ -11,23 +11,5 @@ jobs:
     steps: 
       - name: Get Code from github
         uses: actions/checkout@v6
-
-      - name: Installing terraform
-        uses: hashicorp/setup-terraform@v4
-        with: 
-          terraform_version: "1.13"
-        
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v6.1.0
-        with: 
-          aws-region: us-east-1
-          role-to-assume: arn:aws:iam::388458311239:role/github-action-role
-
-      - name: Terraform Init
-        run: terraform init
-      
-      - name: Validate Teraform
-        run: terraform validate -no-color
-
-      - name: Terraform Plan
-        run: terraform plan
+      - name: run ls
+        run: ls -a
